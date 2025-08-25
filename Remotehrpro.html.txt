@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remote HR Pro | HR Consulting, Trainings & L&D Programs</title>
+  <meta name="description" content="Remote HR Pro provides corporate trainings, HR consulting, and pre‑placement programs for colleges. Online & offline across India. Book a free consultation." />
+  <meta name="author" content="Remote HR Pro" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231e40af'/><text x='50' y='58' font-size='52' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'>HR</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Remote HR Pro | HR Consulting, Trainings & L&D Programs" />
+  <meta property="og:description" content="Corporate trainings, Virtual HR, and College pre‑placement programs. Book a free consultation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://remotehrpro.co.in/" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/1e40af/ffffff&text=Remote+HR+Pro" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f172a;
+      --muted:#94a3b8;
+      --accent:#2563eb; /* blue */
+      --accent-2:#06b6d4; /* cyan */
+      --text:#e5e7eb;
+      --heading:#ffffff;
+      --ring: rgba(37, 99, 235, .35);
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+      --shadow-soft: 0 6px 18px rgba(2,6,23,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";background:linear-gradient(180deg,#070b16, #0b1220 40%, #0b1220), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="%2318273b"/></pattern></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>') fixed; color:var(--text); line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:14px 20px;border-radius:calc(var(--radius) - 6px);font-weight:600;box-shadow:var(--shadow);cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 14px 36px rgba(6, 182, 212, .35)}
+    .btn-outline{background:transparent;border:1px solid rgba(148,163,184,.3);color:var(--text)}
+    .chip{display:inline-block;padding:6px 12px;border:1px solid rgba(148,163,184,.25);border-radius:999px;color:#cbd5e1;font-size:12px; letter-spacing:.2px}
+    .section{padding:72px 0}
+    .section h2{margin:0 0 14px;font-size:36px; line-height:1.15; color:var(--heading)}
+    .section p.lead{color:var(--muted); max-width:780px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter: blur(10px);border-bottom:1px solid rgba(148,163,184,.12)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-badge{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;font-weight:800;box-shadow:var(--shadow-soft)}
+    .nav a{color:#cbd5e1}
+    .nav .links{display:flex;gap:22px;align-items:center}
+    .mobile-toggle{display:none}
+
+    /* Hero */
+    .hero{padding:90px 0 70px; position:relative; overflow:hidden}
+    .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center}
+    .hero h1{font-size:48px; line-height:1.1; margin:0 0 18px; color:#fff}
+    .hero .sub{color:#a5b4fc; font-weight:600; letter-spacing:.3px}
+    .hero-card{background:radial-gradient(1200px 500px at 20% -20%, rgba(37,99,235,.25), transparent 60%), var(--card); border:1px solid rgba(148,163,184,.15); padding:26px; border-radius:var(--radius); box-shadow:var(--shadow)}
+    .hero-stats{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:20px}
+    .stat{background:rgba(148,163,184,.08); border:1px solid rgba(148,163,184,.15); padding:16px; border-radius:14px; text-align:center}
+    .stat h3{margin:0; font-size:28px; color:#fff}
+    .stat span{color:var(--muted); font-size:12px}
+
+    /* Cards */
+    .grid{display:grid; gap:22px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow-soft)}
+    .card h3{margin:6px 0 10px; color:#fff}
+    .card p{color:var(--muted)}
+    .card .icon{width:42px; height:42px; border-radius:12px; display:grid;place-items:center; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.25)}
+
+    /* Programs */
+    .program{display:flex; flex-direction:column; gap:16px}
+    .program ul{margin:0;padding-left:18px;color:var(--muted)}
+
+    /* Testimonials */
+    .slider{position:relative}
+    .slides{display:flex;overflow:hidden;scroll-behavior:smooth}
+    .testimonial{min-width:100%; padding:28px; background:var(--card); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius)}
+    .t-meta{display:flex; align-items:center; gap:12px; margin-top:10px; color:#cbd5e1}
+    .t-nav{position:absolute; inset:0; display:flex; justify-content:space-between; align-items:center; pointer-events:none}
+    .t-nav button{pointer-events:auto; border:1px solid rgba(148,163,184,.25); background:rgba(2,6,23,.6); color:#fff; width:42px; height:42px; border-radius:999px; display:grid; place-items:center}
+
+    /* Contact */
+    form{display:grid; gap:14px}
+    .field{display:grid; gap:6px}
+    .field input, .field textarea{background:#0b1325; border:1px solid rgba(148,163,184,.25); color:#fff; padding:12px 14px; border-radius:12px; outline:none}
+    .field input:focus, .field textarea:focus{border-color:var(--accent); box-shadow:0 0 0 6px var(--ring)}
+    .contact-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:22px}
+    .info-list{display:grid; gap:12px}
+    .info-item{display:flex; gap:12px; align-items:flex-start; color:#cbd5e1}
+    .info-item .i{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.25)}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(148,163,184,.12); padding:26px 0; color:#94a3b8}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .center{display:grid; place-items:center}
+    .hidden{display:none}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:60px}
+    }
+    @media (max-width: 760px){
+      .nav .links{display:none}
+      .mobile-toggle{display:inline-flex}
+      .hero h1{font-size:38px}
+      .section h2{font-size:28px}
+      .grid.cols-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Remote HR Pro home">
+        <span class="logo-badge">HR</span>
+        <div>
+          <strong style="color:#fff; font-size:18px; display:block">Remote HR Pro</strong>
+          <small class="muted">HR Consulting • L&D • Trainings</small>
+        </div>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#programs">Programs</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn" style="padding:10px 14px">Book Consultation</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open Menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" title="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden" style="border-top:1px solid rgba(148,163,184,.12);">
+      <div class="container" style="padding:10px 0 16px; display:grid; gap:10px">
+        <a href="#services" onclick="this.closest('#mobileMenu').classList.add('hidden')">Services</a>
+        <a href="#programs" onclick="this.closest('#mobileMenu').classList.add('hidden')">Programs</a>
+        <a href="#testimonials" onclick="this.closest('#mobileMenu').classList.add('hidden')">Testimonials</a>
+        <a href="#about" onclick="this.closest('#mobileMenu').classList.add('hidden')">About</a>
+        <a href="#contact" class="btn" onclick="this.closest('#mobileMenu').classList.add('hidden')">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="chip sub">People‑first HR • Online & Offline</span>
+        <h1>Strategic HR, Corporate Trainings & Pre‑Placement Programs</h1>
+        <p class="muted" style="max-width:680px">We help companies build high‑performing teams and students crack corporate interviews. From leadership & communication to interview hacks and retention strategies—our programs drive outcomes.</p>
+        <div style="display:flex; gap:12px; margin-top:18px">
+          <a href="#contact" class="btn">Book a Free Consultation</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><h3>50+ </h3><span>Workshops Delivered</span></div>
+          <div class="stat"><h3>1K+ </h3><span>Learners Impacted</span></div>
+          <div class="stat"><h3>4.8/5</h3><span>Avg. Session Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="icon">💼</div>
+            <h3>Corporate Trainings</h3>
+            <p>Leadership, communication, new manager bootcamps, DEI sensitization, employee engagement & retention.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Pre‑Placement (Colleges)</h3>
+            <p>Resume to HR interview—mock interviews, GDs, ATS resumes, LinkedIn optimization & aptitude readiness.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧭</div>
+            <h3>Virtual HR Advisory</h3>
+            <p>Policy design, hiring pipelines, JD writing, offer & onboarding, OKRs and performance management.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧩</div>
+            <h3>Custom L&D Programs</h3>
+            <p>Outcome‑based cohorts tailored for your team’s skill gaps and business goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="lead">Pick from ready‑to‑run modules or request a custom track. Every engagement includes needs analysis, pre‑work, live sessions, and action plans.</p>
+      <div class="grid cols-3" style="margin-top:16px">
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>Leadership & Communication</h3>
+          <p>Manager toolkits, executive presence, feedback frameworks (SBI, DESC), conflict resolution, storytelling.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>Interview Hacks</h3>
+          <p>STAR responses, portfolio building, mock panels, salary negotiation and case rounds.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🤝</div>
+          <h3>Employee Engagement & Retention</h3>
+          <p>Manager rituals, 1:1s, recognition systems, stay interviews, pulse surveys and EVP design.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⚙️</div>
+          <h3>HR Systems & Policy</h3>
+          <p>HR policies, handbooks, performance reviews, OKRs, JD frameworks, onboarding and exit processes.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧪</div>
+          <h3>Assessment & Diagnostics</h3>
+          <p>Skill gap mapping, 360° feedback, role clarity workshops and competency matrices.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🌐</div>
+          <h3>Campus to Corporate</h3>
+          <p>Resume, LinkedIn, GD/PI, aptitude touch‑ups and corporate culture prep for graduating batches.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="section" style="padding-top:40px">
+    <div class="container">
+      <h2>Programs</h2>
+      <p class="lead">Two tracks, one mission—build confident professionals and cohesive teams.</p>
+      <div class="grid cols-2" style="margin-top:16px">
+        <div class="card program">
+          <h3>For Corporates</h3>
+          <ul>
+            <li>New Manager Bootcamp (2 days)</li>
+            <li>High‑Impact Communication Labs (4 sessions)</li>
+            <li>Leader as Coach – Coaching conversations</li>
+            <li>Building Engagement & Retention Playbooks</li>
+          </ul>
+          <div>
+            <a href="#contact" class="btn">Request Proposal</a>
+          </div>
+        </div>
+        <div class="card program">
+          <h3>For Colleges</h3>
+          <ul>
+            <li>Pre‑Placement Program (20 hours)</li>
+            <li>GD/PI Mastery + Mock Interviews</li>
+            <li>Resume & ATS + LinkedIn Optimization</li>
+            <li>Corporate Etiquette & Workplace Readiness</li>
+          </ul>
+          <div>
+            <a href="#contact" class="btn">Enquire for Campus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section" style="padding-top:40px">
+    <div class="container slider">
+      <h2>What Clients Say</h2>
+      <p class="lead">Real outcomes from our partners and learners.</p>
+      <div class="slides" id="slides">
+        <article class="testimonial">
+          <p>“Practical and energizing. Our managers left with ready‑to‑use frameworks and a clear 90‑day plan.”</p>
+          <div class="t-meta"><strong>HR Lead</strong> · Fintech, Gurgaon</div>
+        </article>
+        <article class="testimonial">
+          <p>“The pre‑placement series boosted our selection rate noticeably. Students loved the mock panels.”</p>
+          <div class="t-meta"><strong>T&P Officer</strong> · Delhi University</div>
+        </article>
+        <article class="testimonial">
+          <p>“Remote HR Pro set up our HR policies and onboarding. Smooth, compliant and human‑centric.”</p>
+          <div class="t-meta"><strong>Founder</strong> · SaaS Startup, Noida</div>
+        </article>
+      </div>
+      <div class="t-nav">
+        <button aria-label="Previous" onclick="prevSlide()">⟨</button>
+        <button aria-label="Next" onclick="nextSlide()">⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section" style="padding-top:40px">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2>About Remote HR Pro</h2>
+        <p class="lead">Founded by <strong>Isha Gupta</strong>, Remote HR Pro delivers people‑centric HR solutions—blending strategy with hands‑on facilitation.</p>
+        <p>We partner with corporates and colleges to design outcome‑based learning and set up scalable HR systems. Sessions are available online and in‑person across India.</p>
+        <div style="margin-top:10px">
+          <span class="chip">Based in Delhi‑NCR</span>
+          <span class="chip">Online & Offline</span>
+          <span class="chip">Custom Cohorts</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Why Work With Us</h3>
+        <ul class="muted">
+          <li>Programs mapped to business outcomes, not just attendance.</li>
+          <li>Playbooks, templates and toolkits included for easy adoption.</li>
+          <li>Post‑session support: Q&A office hours and implementation nudges.</li>
+        </ul>
+        <div style="margin-top:12px">
+          <a href="#contact" class="btn">Get a Custom Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" style="padding-top:40px">
+    <div class="container contact-grid">
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p class="lead">Tell us about your team or batch. We’ll recommend the right track and share a proposal.</p>
+        <form id="enquiryForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91‑XXXXXXXXXX" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="What do you need help with?" required></textarea>
+          </div>
+          <button class="btn" type="submit">Submit Enquiry</button>
+          <p id="formNote" class="muted" style="margin:6px 0 0">We usually respond within 24 hours.</p>
+        </form>
+      </div>
+      <aside class="card">
+        <h3>Reach Us Directly</h3>
+        <div class="info-list">
+          <div class="info-item"><span class="i">✉️</span> ishagupta@remotehrpro.co.in</div>
+          <div class="info-item"><span class="i">📞</span> +91 7678657225</div>
+          <div class="info-item"><span class="i">📍</span> Delhi‑NCR, India (Online & Offline)</div>
+          <div class="info-item"><span class="i">🗓️</span> Mon–Fri · 10:00–18:00 IST</div>
+        </div>
+        <div style="margin-top:16px">
+          <a class="btn btn-outline" href="https://wa.me/917678657225" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <small>© <span id="year"></span> Remote HR Pro. All rights reserved.</small>
+      <small>Privacy • Terms • Sitemap</small>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/917678657225" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed; right:18px; bottom:18px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; width:56px; height:56px; border-radius:50%; display:grid; place-items:center; box-shadow:var(--shadow)">💬</a>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple testimonial slider
+    const slides = document.getElementById('slides');
+    let index = 0;
+    function showSlide(i){
+      const total = slides.children.length;
+      index = (i + total) % total;
+      slides.scrollTo({left: slides.clientWidth * index, behavior: 'smooth'});
+    }
+    function nextSlide(){ showSlide(index + 1); }
+    function prevSlide(){ showSlide(index - 1); }
+    setInterval(() => nextSlide(), 6000);
+
+    // Contact form (front‑end validation + example submission)
+    const form = document.getElementById('enquiryForm');
+    const note = document.getElementById('formNote');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Basic validation
+      if(!data.name || !data.email || !data.phone || !data.message){
+        note.textContent = 'Please fill all required fields.'; return;
+      }
+      // Example: send to Formspree (replace with your endpoint or backend)
+      try {
+        const res = await fetch('https://formspree.io/f/mwpezyka', { // ← replace with your Formspree ID or backend
+          method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+        });
+        if(res.ok){
+          form.reset(); note.textContent = 'Thanks! Your enquiry has been sent.';
+        } else {
+          note.textContent = 'Unable to send right now. Please email us at ishagupta@remotehrpro.co.in';
+        }
+      } catch (err){
+        note.textContent = 'Network error. Please try again or email us directly.';
+      }
+    });
+  </script>
+</body>
+</html>
